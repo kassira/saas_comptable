@@ -1,0 +1,180 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "FinanceManager Pro",
+      "archetype": "Swiss Precision meets Fintech Future",
+      "core_values": ["Clarity", "Authority", "Efficiency", "Trust"],
+      "vibe": "The Bloomberg Terminal for the modern age. Dense data presented with absolute optical clarity. No fluff, just insight."
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Manrope, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "usage_rules": [
+        "Headings (H1-H3) must use Manrope. Use tight tracking (-0.02em) for sizes above 24px.",
+        "Body text must use Inter. Use relaxed line-height (1.6) for readability.",
+        "ALL financial data, currency, and dates MUST use JetBrains Mono.",
+        "Never use 'Inter' for headings.",
+        "Use uppercase + wide tracking (0.1em) for labels (e.g., 'TOTAL REVENUE')."
+      ]
+    },
+    "colors": {
+      "palette_strategy": "Archetype 4: Swiss & High-Contrast (Modified for Finance)",
+      "light_mode": {
+        "background": "0 0% 98%",
+        "foreground": "222 47% 11%",
+        "card": "0 0% 100%",
+        "card_foreground": "222 47% 11%",
+        "popover": "0 0% 100%",
+        "popover_foreground": "222 47% 11%",
+        "primary": "222 47% 11%",
+        "primary_foreground": "210 40% 98%",
+        "secondary": "210 40% 96.1%",
+        "secondary_foreground": "222 47% 11%",
+        "muted": "210 40% 96.1%",
+        "muted_foreground": "215.4 16.3% 46.9%",
+        "accent": "210 40% 96.1%",
+        "accent_foreground": "222 47% 11%",
+        "destructive": "0 84.2% 60.2%",
+        "destructive_foreground": "210 40% 98%",
+        "border": "214.3 31.8% 91.4%",
+        "input": "214.3 31.8% 91.4%",
+        "ring": "222 47% 11%",
+        "chart_1": "221.2 83.2% 53.3%",
+        "chart_2": "212 95% 68%",
+        "chart_3": "216 92% 60%",
+        "chart_4": "210 98% 78%",
+        "chart_5": "212 97% 87%"
+      },
+      "dark_mode": {
+        "background": "222 47% 4%",
+        "foreground": "210 40% 98%",
+        "card": "222 47% 6%",
+        "card_foreground": "210 40% 98%",
+        "popover": "222 47% 6%",
+        "popover_foreground": "210 40% 98%",
+        "primary": "210 40% 98%",
+        "primary_foreground": "222 47% 11.2%",
+        "secondary": "217.2 32.6% 17.5%",
+        "secondary_foreground": "210 40% 98%",
+        "muted": "217.2 32.6% 17.5%",
+        "muted_foreground": "215 20.2% 65.1%",
+        "accent": "217.2 32.6% 17.5%",
+        "accent_foreground": "210 40% 98%",
+        "destructive": "0 62.8% 30.6%",
+        "destructive_foreground": "210 40% 98%",
+        "border": "217.2 32.6% 17.5%",
+        "input": "217.2 32.6% 17.5%",
+        "ring": "212.7 26.8% 83.9%",
+        "chart_1": "220 70% 50%",
+        "chart_2": "160 60% 45%",
+        "chart_3": "30 80% 55%",
+        "chart_4": "280 65% 60%",
+        "chart_5": "340 75% 55%"
+      },
+      "semantic_rules": [
+        "Use 'Primary' for main actions (Save, Submit).",
+        "Use 'Destructive' for critical actions (Delete, Reject).",
+        "Use 'Muted' for secondary information (labels, help text).",
+        "Use 'Accent' for hover states and active list items.",
+        "NEVER use gradients for text.",
+        "Borders in dark mode must be subtle (opacity 20% or hex #262626)."
+      ]
+    },
+    "layout": {
+      "spacing_scale": "Tailwind Scale (p-1 to p-64)",
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "grid_system": {
+        "dashboard": "Bento Grid Mode B (High Density)",
+        "marketing": "Bento Grid Mode A (Tetris)",
+        "rules": [
+          "Dashboard widgets must fill height (h-full).",
+          "Use gap-4 for dense data views, gap-8 for overview pages.",
+          "Sidebar navigation is preferred for this app type."
+        ]
+      },
+      "border_radius": {
+        "default": "0.5rem (8px)",
+        "card": "0.75rem (12px)",
+        "button": "0.375rem (6px) - Sharp/Technical feel"
+      }
+    },
+    "components": {
+      "buttons": {
+        "style": "Flat, high contrast. No shadows on default state.",
+        "hover": "Subtle lift (-1px) and shadow-sm."
+      },
+      "cards": {
+        "style": "Flat background, 1px border. No shadow by default.",
+        "hover": "Border color darkens/lightens. No massive shadow bloom."
+      },
+      "inputs": {
+        "style": "bg-background border-input ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      },
+      "charts": {
+        "library": "Recharts (via Shadcn/UI)",
+        "style": "Minimalist. Remove grid lines if possible. Use tooltips for data."
+      },
+      "tables": {
+        "style": "Dense. Row height 40px. Header uppercase and muted.",
+        "zebra_striping": "Optional, but prefer hover row highlighting."
+      }
+    },
+    "visual_enhancers": {
+      "glassmorphism": "Use only for sticky headers and modal overlays. Backdrop-blur-xl.",
+      "noise": "Add a subtle 2% noise texture to the dark mode background to prevent banding.",
+      "gradients": "Use extremely subtle gradients (5% opacity) on active dashboard cards to show 'life'."
+    },
+    "assets": {
+      "icons": "Lucide React (default). Use stroke-width={1.5} for a refined look.",
+      "images": {
+        "user_avatars": [
+          "https://images.unsplash.com/photo-1576558656222-ba66febe3dec?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "https://images.unsplash.com/photo-1558531304-a4773b7e3a9c?crop=entropy&cs=srgb&fm=jpg&q=85"
+        ],
+        "office_backgrounds": [
+          "https://images.unsplash.com/photo-1666618207644-4de0226a3f85?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "https://images.unsplash.com/photo-1571176242081-bf093bb3a10d?crop=entropy&cs=srgb&fm=jpg&q=85"
+        ]
+      }
+    },
+    "accessibility": {
+      "contrast": "Ensure 4.5:1 for normal text. Use APCA where possible.",
+      "focus_states": "Visible ring-2 ring-offset-2 on all interactive elements.",
+      "reduced_motion": "Respect prefers-reduced-motion media query."
+    },
+    "universal_guidelines": [
+      "Do not use 'Inter' for headings.",
+      "Do not use generic centered layouts.",
+      "Use 'sonner' for toasts.",
+      "Use 'lucide-react' for icons.",
+      "All interactive elements must have data-testid attributes.",
+      "Dark colors look good when used independently without gradients.",
+      "Create depth through layered design elements with z-index hierarchy."
+    ]
+  },
+  "instructions_to_main_agent": {
+    "setup": [
+      "Update /app/frontend/src/index.css with the provided CSS variables.",
+      "Install necessary fonts (Manrope, JetBrains Mono) via Google Fonts import in index.css.",
+      "Ensure Tailwind config respects the 'class' strategy for dark mode."
+    ],
+    "implementation_order": [
+      "1. Setup Global Styles (Fonts, Colors, CSS Variables).",
+      "2. Build Layout Shell (Sidebar, Header, Main Content Area).",
+      "3. Implement Dashboard Widgets (Charts, Stats Cards).",
+      "4. Build Data Tables (Invoices, Journal Entries).",
+      "5. Add Polish (Transitions, Hover States, Loading Skeletons)."
+    ]
+  }
+}
